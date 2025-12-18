@@ -10,6 +10,8 @@
     "module": "nodenext",
     "target": "esnext",
     "types": [],
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -19,10 +21,13 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noEmitOnError": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -33,6 +38,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
+    "esModuleInterop": true,
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
@@ -40,5 +46,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./src"]
 }
